@@ -1,0 +1,214 @@
+
+
+
+%\input{../header.tex}
+%\setbeamertemplate{headline}{}
+
+
+\documentclass{beamer}
+\usepackage{mathrsfs,xcolor,setspace,comment,centernot,listings,framed}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% config du theme metropolis
+\usetheme[progressbar=frametitle,block=fill, titleformat=smallcaps,sectionpage=progressbar,]{metropolis}
+
+
+
+
+%\title{Analyse spatiale}
+%\subtitle{Présentation des projets}
+\title{Présentation des projets}
+
+\author{Juste Raimbault et Yann Meneroux\medskip\\
+%\texttt{paul.chapron@ign.fr}\\
+\texttt{yann.meneroux@ign.fr}\\
+\texttt{juste.raimbault@ign.fr}
+}
+
+
+\institute{LASTIG, Univ Gustave Eiffel, IGN-ENSG}
+
+
+%\date{Cours Analyse Spatiale - DeSIGeo\\\smallskip
+%07/03/2022
+%21/11/2023
+%[14?]/12/2024
+%12/12/2025
+%}
+\date{ING3 - Filière Geo Data Science - UE2 Analyse de données%\\\smallskip
+
+}
+
+
+%definition de la couleur du texte dans la balise \alert{}
+\definecolor{vertIGN}{HTML}{96C31E} % vert IGN %vrai valeur #97BE0D
+\setbeamercolor{alerted text}{fg=vertIGN}
+
+\definecolor{grisIGN}{HTML}{22292F} % Gris IGN tiré vers le noir 
+\setbeamercolor{background canvas}{bg=grisIGN}
+
+
+% code pour placer le log ENSG dans le bandeau de titre 
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[%
+      wd=\paperwidth,%
+      sep=0pt,%
+      leftskip=\metropolis@frametitle@padding,%
+      rightskip=\metropolis@frametitle@padding,%
+    ]{frametitle}%
+  \metropolis@frametitlestrut@start%
+  \insertframetitle%
+  \nolinebreak%
+  \metropolis@frametitlestrut@end%
+  \hfill
+  \raisebox{-0.6ex}{\includegraphics[height=4ex,keepaspectratio]{../../../Resources/logoENSG_small.jpg}}
+  \end{beamercolorbox}%
+}
+\makeatother
+
+
+
+
+% logo ENSG première page 
+\titlegraphic{\vspace{4cm}\flushright\includegraphics[width=2cm,height=2cm]{../../../Resources/logoENSG_big.png}} 
+
+
+
+\begin{document}
+\metroset{background=dark} % change background theme according to manual
+\maketitle	
+
+
+
+
+
+% projet: req git repo pour rendu: release
+
+\begin{frame}{Objectifs des projets}
+
+$\rightarrow$ Utiliser les concepts vus en cours pour répondre à une question de recherche ou opérationnelle (par exemple à laquelle vous êtes confrontés dans votre alternance).
+
+\bigskip
+
+$\rightarrow$ \textbf{Dimension spatiale} de la question nécessaire.
+
+\bigskip
+
+$\rightarrow$ Mobiliser certaines méthodes et outils vus en TP pour y répondre.
+
+\bigskip
+
+$\rightarrow$ Combiner les points de vue, sensibilités, compétences, et approches.
+
+\end{frame}
+
+\begin{frame}{Exemples de données}
+
+\textit{Jeux de données à chercher selon la question posée (ou trouver un sujet en fonction des données à votre disposition); doivent être accessibles et gratuites, préférentiellement ouvertes.}
+
+\bigskip
+
+\begin{itemize}
+	\item Données publiques ouvertes : IGN, INSEE
+	\item Données volontaires : OpenStreetMap
+	\item Données utilisées en TP
+	\item Données utilisées dans votre alternance
+	%\item Données restreintes ? \textit{Ne pas perdre trop de temps à chercher des données}
+	\item \ldots
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Exemples de thèmes: géographie urbaine}
+
+%\textbf{Socio/eco urbaine : }
+
+\begin{itemize}
+	\item Organisation socio-économique au sein des aires urbaines, et comparaison entre aires urbaines
+	\item Test empirique du modèle monocentrique d'Alonso
+	\item Déterminants des flux migratoires entre aires urbaines
+	\item Etude spatialisée de la croissance de la population
+	\item Structures socio-spatiales des marchés immobiliers
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Exemples de thèmes: transports/mobilité}
+
+%\textbf{Transports/mobilité : }
+
+\begin{itemize}
+	\item accessibilité TC/VP dans les aires urbaines françaises
+	\item impact d'un projet de transport comme le Grand Paris Express
+	\item priorités d'aménagements ferroviaires en France : grande vitesse vs lignes locales ? Cadre régional ou européen ?
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Exemples de thèmes: réseaux spatiaux}
+
+		%\textbf{Autres disciplines / thèmes \ldots} : 
+		
+		\begin{itemize}
+			\item étude des propriétés de percolation de graphes aléatoires spatiaux
+			\item particularités des réseaux spatiaux
+			\item propriétés de réseaux d'infrastructures
+		\end{itemize}				
+		
+\end{frame}
+
+\begin{frame}{Exemples de thèmes: divers}
+	
+	\begin{itemize}
+		\item Pratique du e-sport
+		\item Dynamique financières dans le marché des devises
+		\item Occurrences des catastrophes naturelles et lien avec le changement climatique
+\end{itemize}		
+	
+\end{frame}
+
+
+\begin{frame}{Années précédentes}
+	\begin{itemize}
+		\item Chômage et accessibilité en Ile-de-France
+		\item Dynamiques électorales
+		\item Prix de l'essence
+		\item Ecoutes Spotify par pays
+		\item Crimes et délits à la commune en France
+		\item Feux de forêt aux Etats-Unis
+		\item AirBnb à Paris
+		\item Prix immobiliers
+		\item \ldots
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Modalités concrètes}
+
+\begin{itemize}
+	%\item Petits groupes de 2,3 ou 4, autant que possible avec compétences et sensibilités diverses.
+	\item Petits groupes avec compétences diverses	
+	\item Possibilité de lier le sujet à d'autres projets, votre alternance, etc.
+	\item Produire des analyses quantitatives (minimum 3 méthodes, en partie spatialisées) : langage/logiciels au choix tant qu'ils sont libres (R, python, \ldots).
+	\item Code source ouvert $\rightarrow$ dépôt github pour chaque groupe.
+	\item Rendu sous forme de \textit{release} github : code et rapport (une quinzaine pages) dans le dépôt, au plus tard la veille des présentations.
+	\item Evaluation par présentation de 15 minutes à tous lors de la dernière séance le 13 janvier (une partie de l'évaluation portera sur le retour des autres). % 22 décembre 
+	\item Séances de travail en autonomie et séances encadrées.
+	%\item Pas trop long / de temps à y passer : $\sim$ 10h par personne (moitié du temps de cours)
+\end{itemize}
+
+
+
+
+\end{frame}
+
+
+
+
+\end{document}
